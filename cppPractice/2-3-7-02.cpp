@@ -17,12 +17,12 @@ void initLinkList(LinkList& L)
 LNode* getNode(LinkList L, int pos)
 {
     int i = 0;
+    if(L == nullptr || i > pos) return nullptr;
     while(L != nullptr && i < pos)
     {
         L = L->next;
         i++;
     }
-    if(L == nullptr || i > pos) return nullptr;
     return L;
 }
 
