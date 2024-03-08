@@ -18,7 +18,7 @@ LNode* getNode(LinkList L, int pos)
 {
     int i = 0;
     if(L == nullptr || i > pos) return nullptr;
-    while(L != nullptr && i < pos)
+    while(L != nullptr && i < pos) //直到i == pos时，返回pos处的结点
     {
         L = L->next;
         i++;
@@ -31,8 +31,8 @@ int getLength(LinkList L)
     int i = 0;
     while(L->next != nullptr)
     {
-        L = L->next;
         i++;
+        L = L->next;
     }
     return i;
 }
