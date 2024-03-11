@@ -42,7 +42,7 @@ bool Pop(Stack& S, ElemType& elem)
 
 bool EnQueue(SqQueue& Q, ElemType elem)
 {
-    if((Q.rear + 1) % MaxSize == Q.front) return false; //(Q.rear + 1) - Q.front == 0
+    if((Q.rear + 1) % MaxSize == Q.front) return false; //(Q.rear + 1 + MaxSize) - Q.front == 0
     Q.data[Q.rear] = elem;
     Q.rear = (Q.rear + 1) % MaxSize;
     return true;
