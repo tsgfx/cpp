@@ -6,7 +6,7 @@ typedef char ElemType;
 typedef struct LNode  
 {
     ElemType data;
-    struct LNode* next;
+    struct LNode *next;
 }LNode, *LinkStack;
 
 bool InitStack(LinkStack& S)
