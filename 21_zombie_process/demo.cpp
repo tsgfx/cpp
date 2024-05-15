@@ -3,15 +3,16 @@
 using namespace std;
 int main()
 {
-    if(fork() > 0)
+    // 让1号进程托管子进程
+    if (fork() > 0)
     {
         sleep(20);
         cout << "父进程退出。" << endl;
         return 0;
     }
-    else 
+    else
     {
-        for(int i = 0 ; i < 100; i++)
+        for (int i = 0; i < 100; i++)
         {
             cout << "子进程继续运行中。" << endl;
             sleep(1);
